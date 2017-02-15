@@ -1,3 +1,7 @@
+# OSX
+#
+.DS_Store
+
 # Xcode
 #
 build/
@@ -16,15 +20,35 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-report.xml
-*.mobileprovision
-Pods/
+project.xcworkspace
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# BUCK
+buck-out/
+\.buckd/
+android/app/libs
+*.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
+
+fastlane/report.xml
+fastlane/Preview.html
 fastlane/screenshots
-*.itmsp
-*.gcno
-*.cer
-*.gcda
-
-*.certSigningRequest
-
-*.p12
