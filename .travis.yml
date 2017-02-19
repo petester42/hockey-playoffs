@@ -1,16 +1,13 @@
 language: objective-c
-osx_image: xcode6.4
-cache: bundler
-rvm:
-  - system
-before_install:
-  - sudo gem install bundler
-  - xcrun instruments -w "iPhone 6 (8.4 Simulator)" || echo "(Pre)Launched the simulator."
+osx_image: xcode8
+
 install:
-  - bundle install
-before_script:
-  - bundle exec pod keys set HockeyAPIPath $HockeyAPIPath HockeyPlayoffs
+  - brew install node
+  - brew install yarn
+  - rm -Rf "${TMPDIR}/jest_preprocess_cache"
+  - yarn install
+
+before_script: 
+  - yarn build
 script:
-  - bundle exec fastlane test
-after_success:
-  - bundle exec slather  
+  - yarn test
