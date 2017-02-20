@@ -8,9 +8,10 @@
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "prebuild": "rm -rf build",
     "build": "tsc",
-    "building": "tsc --watch",
+    "building": "yarn build -- --watch",
+    "pretest": "yarn build",
     "test": "jest",
-    "testing": "jest --watch"
+    "testing": "yarn test -- --watch"
   },
   "dependencies": {
     "@types/react": "^15.0.11",
@@ -19,6 +20,8 @@
     "react-native": "0.41.2"
   },
   "devDependencies": {
+    "@types/jest": "^18.1.1",
+    "@types/react-test-renderer": "^15.4.2",
     "babel-jest": "18.0.0",
     "babel-preset-react-native": "1.9.1",
     "jest": "18.1.0",
