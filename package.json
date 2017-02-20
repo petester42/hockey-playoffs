@@ -10,7 +10,7 @@
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "prebuild": "rm -rf build",
     "build": "tsc",
-    "watch": "tsc --watch",
+    "building": "tsc --watch",
     "test": "jest",
     "testing": "jest --watch"
   },
