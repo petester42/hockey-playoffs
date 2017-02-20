@@ -2,7 +2,7 @@ language: objective-c
 osx_image: xcode8
 
 install:
-  - brew update node
+  - brew upgrade node
   - brew install yarn
   - rm -Rf "${TMPDIR}/jest_preprocess_cache"
   - yarn install
