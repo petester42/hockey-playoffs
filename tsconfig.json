@@ -4,6 +4,7 @@
         "module": "es6",
         "jsx": "react",
         "outDir": "build",
+        "sourceRoot": "src",
         "allowSyntheticDefaultImports": true,
         "noImplicitAny": true,
         "strictNullChecks": true,
@@ -12,16 +13,12 @@
         "allowJs": true,
         "sourceMap": true
     },
-    "filesGlob": [
+    "include": [
         "src/**/*.ts",
-        "src/**/*.tsx",
-        "__tests__/**/*.ts",
-        "__tests__/**/*.tsx"
+        "src/**/*.tsx"
     ],
     "exclude": [
-        "./**/index.android.js",
-        "./**/index.ios.js",
-        "build",
+        "__tests__",
         "node_modules"
     ],
     "compileOnSave": true
