@@ -8,10 +8,10 @@
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "prebuild": "rm -rf build",
     "build": "tsc",
-    "building": "yarn build -- --watch",
-    "pretest": "yarn build",
-    "test": "jest",
-    "testing": "yarn test -- --watch"
+    "building": "npm build -- --watch",
+    "pretest": "npm build",
+    "test": "jest --no-cache",
+    "testing": "npm test -- --watch"
   },
   "dependencies": {
     "@types/react": "^15.0.11",
@@ -29,6 +29,19 @@
     "typescript": "^2.1.6"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "ts",
+      "tsx"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.(ts|tsx|js|jsx)"
+    ]
   }
 }
