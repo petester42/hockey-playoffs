@@ -7,7 +7,5 @@ install:
   - rm -Rf "${TMPDIR}/jest_preprocess_cache"
   - yarn install
 
-before_script: 
-  - yarn build
 script:
   - yarn test
