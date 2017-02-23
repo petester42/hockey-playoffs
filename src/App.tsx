@@ -9,11 +9,11 @@ import {
 
 import Test from "./Test";
 
-interface Props {
+export interface Props {
 
 }
 
-interface State {
+export interface State {
 
 }
 

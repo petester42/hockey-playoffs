@@ -6,11 +6,11 @@ import {
   ViewStyle
 } from 'react-native';
 
-interface Props {
+export interface Props {
 
 }
 
-interface State {
+export interface State {
 
 }
 
