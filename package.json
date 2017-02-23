@@ -8,10 +8,10 @@
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "prebuild": "rm -rf build",
     "build": "tsc",
-    "building": "npm build -- --watch",
-    "pretest": "npm build",
+    "building": "yarn build -- --watch",
+    "pretest": "yarn build",
     "test": "jest --no-cache",
-    "testing": "npm test -- --watch"
+    "testing": "yarn test -- --watch"
   },
   "dependencies": {
     "@types/react": "^15.0.11",
