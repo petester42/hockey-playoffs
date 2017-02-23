@@ -7,7 +7,7 @@ import {
   TextStyle
 } from 'react-native';
 
-import Test from "./Test";
+import SeriesNode from "./Components/SeriesNode"
 
 export interface Props {
 
@@ -18,45 +18,63 @@ export interface State {
 }
 
 interface Styles {
+  background: ViewStyle,
   container: ViewStyle,
-  welcome: TextStyle,
-  instructions: TextStyle
+  row: ViewStyle
 }
 
 const styles = StyleSheet.create<Styles>({
-  container: {
+  background: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'gray'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  container: {
+    marginTop: 20,
+    padding: 10,
+    flex: 1,
+    justifyContent: 'space-between'
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  }
 });
 
 export default class App extends Component<Props, State> {
   render() {
     return (
+      <View style={styles.background}>
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-        <Test></Test>
+        <View style={styles.row}>
+          <SeriesNode />
+          <SeriesNode />
+          <SeriesNode />
+          <SeriesNode />
+        </View>
+        <View style={styles.row}>
+          <SeriesNode />
+          <SeriesNode />
+        </View>
+        <View style={styles.row}>
+          <SeriesNode />
+        </View>
+        <View style={styles.row}>
+          <SeriesNode />
+        </View>
+        <View style={styles.row}>
+          <SeriesNode />
+        </View>
+        <View style={styles.row}>
+          <SeriesNode />
+          <SeriesNode />
+        </View>
+        <View style={styles.row}>
+          <SeriesNode />
+          <SeriesNode />
+          <SeriesNode />
+          <SeriesNode />
+        </View>
+      </View>
       </View>
     );
   }
