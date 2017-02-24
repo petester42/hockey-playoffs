@@ -18,7 +18,7 @@ export interface State {
 
 interface Styles {
   container: ViewStyle,
-   line: ViewStyle
+  line: ViewStyle
 }
 
 const styles = StyleSheet.create<Styles>({
@@ -29,8 +29,8 @@ const styles = StyleSheet.create<Styles>({
     overflow: 'hidden'
   },
   line: {
-      backgroundColor: 'white',
-      height: 1,
+    backgroundColor: 'white',
+    height: 1,
   }
 });
 

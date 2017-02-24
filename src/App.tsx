@@ -44,37 +44,37 @@ export default class App extends Component<Props, State> {
   render() {
     return (
       <View style={styles.background}>
-      <View style={styles.container}>
-        <View style={styles.row}>
-          <SeriesNode />
-          <SeriesNode />
-          <SeriesNode />
-          <SeriesNode />
+        <View style={styles.container}>
+          <View style={styles.row}>
+            <SeriesNode />
+            <SeriesNode />
+            <SeriesNode />
+            <SeriesNode />
+          </View>
+          <View style={styles.row}>
+            <SeriesNode />
+            <SeriesNode />
+          </View>
+          <View style={styles.row}>
+            <SeriesNode />
+          </View>
+          <View style={styles.row}>
+            <SeriesNode />
+          </View>
+          <View style={styles.row}>
+            <SeriesNode />
+          </View>
+          <View style={styles.row}>
+            <SeriesNode />
+            <SeriesNode />
+          </View>
+          <View style={styles.row}>
+            <SeriesNode />
+            <SeriesNode />
+            <SeriesNode />
+            <SeriesNode />
+          </View>
         </View>
-        <View style={styles.row}>
-          <SeriesNode />
-          <SeriesNode />
-        </View>
-        <View style={styles.row}>
-          <SeriesNode />
-        </View>
-        <View style={styles.row}>
-          <SeriesNode />
-        </View>
-        <View style={styles.row}>
-          <SeriesNode />
-        </View>
-        <View style={styles.row}>
-          <SeriesNode />
-          <SeriesNode />
-        </View>
-        <View style={styles.row}>
-          <SeriesNode />
-          <SeriesNode />
-          <SeriesNode />
-          <SeriesNode />
-        </View>
-      </View>
       </View>
     );
   }

@@ -37,19 +37,19 @@ const styles = StyleSheet.create<Styles>({
   }
 });
 
-class SeriesNodeComponent extends Component<Props, State> {    
-    render() {
-        return (
-        <View style={styles.container}>
-          <Text style={styles.team}>
-            MTL
+class SeriesNodeComponent extends Component<Props, State> {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.team}>
+          MTL
           </Text>
-           <Text style={styles.score}>
-             4
+        <Text style={styles.score}>
+          4
           </Text>
-        </View>
-        )
-    }
+      </View>
+    )
+  }
 }
 
 export default SeriesNodeComponent
