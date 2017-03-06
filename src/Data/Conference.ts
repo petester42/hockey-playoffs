@@ -1,4 +1,4 @@
-enum Conference {
+export enum Conference {
     East,
     West
 }

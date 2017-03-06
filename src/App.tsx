@@ -4,10 +4,19 @@ import {
   Text,
   View,
   ViewStyle,
-  TextStyle
+  TextStyle,
+  StatusBar,
+  Navigator
 } from 'react-native';
 
-import SeriesNode from "./Components/SeriesNode"
+import Bracket from "./Components/Bracket"
+
+import { Platform, NativeModules } from 'react-native';
+const { StatusBarManager } = NativeModules;
+
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBarManager.HEIGHT;
+
+console.log(StatusBarManager.HEIGHT)
 
 export interface Props {
 
@@ -18,63 +27,25 @@ export interface State {
 }
 
 interface Styles {
-  background: ViewStyle,
-  container: ViewStyle,
-  row: ViewStyle
+  view: ViewStyle
 }
 
 const styles = StyleSheet.create<Styles>({
-  background: {
-    flex: 1,
-    backgroundColor: 'gray'
-  },
-  container: {
-    marginTop: 20,
-    padding: 10,
-    flex: 1,
-    justifyContent: 'space-between'
-  },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-around'
+  view: {
+    flex: 1
   }
 });
 
 export default class App extends Component<Props, State> {
   render() {
     return (
-      <View style={styles.background}>
-        <View style={styles.container}>
-          <View style={styles.row}>
-            <SeriesNode />
-            <SeriesNode />
-            <SeriesNode />
-            <SeriesNode />
-          </View>
-          <View style={styles.row}>
-            <SeriesNode />
-            <SeriesNode />
-          </View>
-          <View style={styles.row}>
-            <SeriesNode />
-          </View>
-          <View style={styles.row}>
-            <SeriesNode />
-          </View>
-          <View style={styles.row}>
-            <SeriesNode />
-          </View>
-          <View style={styles.row}>
-            <SeriesNode />
-            <SeriesNode />
-          </View>
-          <View style={styles.row}>
-            <SeriesNode />
-            <SeriesNode />
-            <SeriesNode />
-            <SeriesNode />
-          </View>
-        </View>
+      <View style={styles.view}>
+        <StatusBar />
+        <Navigator
+          renderScene={(route, navigator) =>
+            <Bracket />
+          }
+        />
       </View>
     );
   }

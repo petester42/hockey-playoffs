@@ -1,15 +1,21 @@
 import Conference from "./Conference"
+import Team from "./Team"
 
-class Series {
+export class Series {
     seasonId: string;
-    topTeamId: string;
-    bottomTeamId: string;
+    topTeam: Team;
+    bottomTeam: Team;
     conference: Conference;
     seed: number;
     round: number;
     topWins: number;
     bottomWins: number;
     hasGameToday: boolean;
+
+    constructor() {
+        this.topTeam = new Team();
+        this.bottomTeam = new Team();
+    }
 }
 
 export default Series
