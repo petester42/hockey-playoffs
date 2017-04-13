@@ -271,6 +271,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		06019D021E9F44230001A846 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0644B5351E9F368E00132969 /* Info.plist */,
+				06019CFB1E9F43330001A846 /* UnitTests-Bridging-Header.h */,
+				0644B5331E9F368E00132969 /* UnitTests.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		060FD6BC1E9F379F000546A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,12 +524,10 @@
 			isa = PBXGroup;
 			children = (
 				06019CF61E9F43230001A846 /* Resources */,
+				06019D021E9F44230001A846 /* Supporting Files */,
 				06019CFC1E9F43330001A846 /* DateTimeHandlerTests.swift */,
-				0644B5351E9F368E00132969 /* Info.plist */,
 				06019CFD1E9F43330001A846 /* StringHandlerTests.swift */,
 				06019CFE1E9F43330001A846 /* TeamHandlerTests.swift */,
-				06019CFB1E9F43330001A846 /* UnitTests-Bridging-Header.h */,
-				0644B5331E9F368E00132969 /* UnitTests.m */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -993,11 +1001,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = W78ZZKUER7;
-				INFOPLIST_FILE = UnitTests/Info.plist;
+				INFOPLIST_FILE = "UnitTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peteappdesigns.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/UnitTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/Supporting Files/UnitTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HockeyPlayoffs.app/HockeyPlayoffs";
@@ -1011,11 +1019,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = W78ZZKUER7;
-				INFOPLIST_FILE = UnitTests/Info.plist;
+				INFOPLIST_FILE = "UnitTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peteappdesigns.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/UnitTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/Supporting Files/UnitTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HockeyPlayoffs.app/HockeyPlayoffs";
 			};
