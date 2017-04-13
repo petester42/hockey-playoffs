@@ -12,6 +12,7 @@
 #import "DatabaseHandler.h"
 #import "PeriodObject.h"
 #import "Queues.h"
+@import UIKit;
 
 @interface GameModel ()
 

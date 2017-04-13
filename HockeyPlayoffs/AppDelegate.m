@@ -14,6 +14,15 @@
 #import "DatabaseHandler.h"
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 
+@import CocoaLumberjack;
+
+#ifdef DEBUG
+static const int ddLogLevel = DDLogLevelDebug;
+#else
+static const int ddLogLevel = DDLogLevelOff;
+#endif
+
+
 #ifdef DEBUG
 #import <SimulatorStatusMagic/SDStatusBarManager.h>
 #endif

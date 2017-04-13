@@ -7,6 +7,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CRToast.h"
 #import "Rotation.h"
+@import UIKit;
 
 //TODO add orientation support and duplicate to branch
 
